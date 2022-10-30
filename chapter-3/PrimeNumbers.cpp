@@ -6,6 +6,7 @@ by any other numbers except for themselves and 1).
 */
 
 /* Version 1.0: Basic version. No error capture for invalid input */
+/* Version 1.1: Removed test for division by 1, since it is always the case.*/
 
 #include <iostream>
 using namespace std;
@@ -19,10 +20,10 @@ int main() {
 
     for(int i = 1; i <= userInt; i++) {
         divisorCount = 0;
-        for(int d = 1; d <= i; d++) {
+        for(int d = 2; d <= i; d++) { // 1 is always a divisor and doesn't need to be tested
             if((i % d) == 0) divisorCount++;
         }
-        if(divisorCount == 2) // prime numbers have only two divisors
+        if(divisorCount == 1) // prime numbers have only 1 and themselves as a divisor
             cout << i << endl;
     }
 
