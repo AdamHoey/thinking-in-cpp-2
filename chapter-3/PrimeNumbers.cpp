@@ -18,7 +18,6 @@ int main() {
     
     int userInt, divisorCount;
     int lineItem = 0; // holds number of items printed to a line
-    float maxDiv;  //  holds the highest divisor to test against a given integer
 
     // Introduce the program and solicit user input.
     cout << "This program will print out all of the prime numbers from 1 up to" << endl;
@@ -28,7 +27,6 @@ int main() {
 
     for(int i = 1; i <= userInt; i++) {
         divisorCount = 0;
-        maxDiv = (int)sqrt(i);
         for(int d = 2; d <= i; d++) { // 1 is always a divisor and doesn't need to be tested
             if((i % d) == 0) divisorCount++;
         }
